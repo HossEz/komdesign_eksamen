@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+    <title>COVID-19 Timeline</title>
+</head>
+<body>
+    <section class="timeline">
+        <div class="event" id="event1">
+            <h2 class="date">Desember 2019</h2>
+            <div class="description">"Pasient null" i Wuhan</div>
+            <div class="extra-text">Det første rapporterte tilfellet av et nytt virus med ukjent opprinnelse.</div>
+        </div>
+        <div class="event" id="event2">
+            <h2 class="date">Januar 2020</h2>
+            <div class="description">Stille Spredning Globalt</div>
+            <div class="extra-text">Viruset spredte seg stille over grensene og påvirket land over hele verden.</div>
+        </div>
+        <div class="event" id="event3">
+            <h2 class="date">Mars 2020</h2>
+            <div class="description">Global Nedstengning</div>
+            <div class="extra-text">Nasjoner over hele verden innførte strenge nedstengninger for å begrense spredningen av viruset.</div>
+        </div>
+        <div class="event" id="event4">
+            <h2 class="date">Juni 2020</h2>
+            <div class="description">Samarbeid om Vaksineinnsats</div>
+            <div class="extra-text">Forskere jobbet sammen globalt for å lage en vaksine, med økt samarbeid.</div>
+        </div>
+        <div class="event" id="event5">
+            <h2 class="date">Desember 2020</h2>
+            <div class="description">Vaksineringskampanje</div>
+            <div class="extra-text">De første vaksinene ble laget, noe som ga alle håp.</div>
+        </div>
+        <div class="event" id="event6">
+            <h2 class="date">April 2021</h2>
+            <div class="description">Global Vaksinepåvirkning</div>
+            <div class="extra-text">Noen måneder inn i vaksinekampanjene var den globale effekten av vaksiner på reduksjon av infeksjonsrater tydelig.</div>
+        </div>
+        <div class="event" id="event7">
+            <h2 class="date">September 2021</h2>
+            <div class="description">Varianter og Utfordringer</div>
+            <div class="extra-text">Nye varianter ble oppdaget, og gjorde det vanskeligere å kontrollere situasjonen.</div>
+        </div>
+        <div class="event" id="event8">
+            <h2 class="date">Dagens Dato</h2>
+            <div class="description">Motstandskraft og Lærdommer</div>
+            <div class="extra-text">I dag reflekterer vi over den nåværende situasjonen, og fremhever styrken som nasjonene viser og alt vi har lært sammen.</div>
+    <script>
+        document.querySelectorAll('.event').forEach(function(event) {
+            const extraText = event.querySelector('.extra-text');
+            event.addEventListener('mouseenter', function() {
+                extraText.style.display = 'block';
+            });
+
+            event.addEventListener('mouseleave', function() {
+                extraText.style.display = 'none';
+            });
+        });
+    </script>
+</body>
+</html>
