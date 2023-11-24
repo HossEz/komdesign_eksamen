@@ -43,9 +43,9 @@ body {
     transform: translateY(-50%);
 }
 
-#event7:hover {
+/* #event7:hover {
     height: 140px;
-}
+} */
 
 .content {
     display: flex;
@@ -73,4 +73,16 @@ body {
 
 .event:hover .extra-text {
     display: block;
+}
+
+.arrow {
+    width: 24px;
+    height: 24px;
+    /* stroke: #db3434; */
+    margin-left: 10px; /* Adjust as needed */
+}
+
+.svg-container{
+    display: flex;
+    justify-content: center;
 }
