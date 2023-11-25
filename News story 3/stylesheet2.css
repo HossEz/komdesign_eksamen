@@ -42,11 +42,11 @@ header div {
     min-height: 100vw;
     min-height: 60vh;
     overflow: hidden;
-    transition: background-image 2s;
+    transition: background-image 1s;
 }
 
 .scrollText {
-    margin: 50vh auto;
+    margin: 30vh auto;
     max-width: 50rem;
     padding: 1rem;
     background: rgba(255, 255, 255, 0.8);
@@ -73,33 +73,9 @@ header div {
 }
 
 .circle {
-    width: 200px;
+    width: 210px;
     height: 200px;
     border-radius: 50%;
-    padding-top: 50px;
-    box-sizing: border-box;
-}
-.redbg {
-    background: red;
-    color: #fff;
-}
-.greenbg {
-    background: green;
-    color: #fff;
-}
-
-.big {
-    text-align: center;
-    font-size: 4rem;
-    display: block;
-    clear: both;
-}
-
-.small{
-    text-align: center;
-    font-size: 2rem;
-    margin: 0 auto;
-    display: block;
 }
 
 #changingbg {
@@ -113,7 +89,10 @@ header div {
 .timeline {
     width: 80%;
     max-width: 800px;
-    margin: 0 auto;
+    margin: 10vh auto;
+}
+.timeline h2 {
+    font-size: 20px;
 }
 
 .event {
@@ -144,9 +123,9 @@ header div {
     transform: translateY(-50%);
 }
 
-/* #event7:hover {
-    height: 140px;
-} */
+#event8:hover {
+    height: 130px;
+} 
 
 .content {
     display: flex;
@@ -179,11 +158,23 @@ header div {
 .arrow {
     width: 24px;
     height: 24px;
-    /* stroke: #db3434; */
-    margin-left: 10px; /* Adjust as needed */
+    margin-left: 10px; 
 }
 
 .svg-container{
     display: flex;
     justify-content: center;
+}
+
+.scrollText2 {
+    margin: 10vh auto;
+    max-width: 50rem;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.8);
+    color: #000;
+}
+
+.kart {
+    width: 80vh;
+    margin: 0 auto;
 }
