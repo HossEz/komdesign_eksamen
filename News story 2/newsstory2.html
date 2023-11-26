@@ -3,9 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>News Story 2</title>
+    <title>US Gun Deaths by State</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
-    
+    <canvas id="gunDeathsChart" width="100" height="40"></canvas>
+
+    <script>
+        const state = ["Wyoming", "West Virginia", "Wisconsin", "Washington", "Vermont", "Virginia", "Utah", "Texas", "Tennessee", "South Dakota", "South Carolina", "Rhode Island", "Pennsylvania", "Oregon", "Oklahoma", "Ohio", "New York", "Nevada", "New Mexico", "New Jersey", "New Hampshire", "Nebraska", "North Dakota", "North Carolina", "Montana", "Mississippi", "Missouri", "Minnesota", "Michigan", "Maine", "Maryland", "Massachusetts", "Louisiana", "Kentucky", "Kansas", "Indiana", "Illinois", "Idaho", "Iowa", "Hawaii", "Georgia", "Florida", "Delaware", "Connecticut", "Colorado", "California", "Arizona", "Arkansas", "Alabama", "Alaska"];
+        const deathRate = [26.1, 17.3, 13.5, 11.2, 11.9, 14.3, 13.9, 15.6, 22.8, 14.3, 22.4, 5.6, 14.8, 14.9, 21.2, 16.5, 5.4, 19.8, 27.8, 5.2, 8.3, 10.3, 16.8, 17.3, 25.1, 33.9, 23.2, 10, 15.4, 12.6, 15.2, 3.4, 29.1, 21.1, 17.3, 18.4, 16.1, 16.3, 11.2, 4.8, 20.3, 14.1, 16.6, 6.7, 17.8, 9, 18.3, 23.3, 26.4, 25.2];
+        const deaths = ["155", "319", "793", "896", "83", "1248", "450", "4613", "1569", "128", "1136", "64", "1905", "670", "836", "1911", "1078", "633", "578", "475", "123", "200", "128", "1839", "280", "962", "1414", "573", "1544", "178", "915", "247", "1314", "947", "503", "1251", "1995", "309", "364", "71", "22", "3142", "158", "248", "1064", "3576", "1365", "698", "1315", "182"];
+
+        const deathsNum = deaths.map(death => parseInt(death.replace(/,/g, '')));
+
+        const ctx = document.getElementById('gunDeathsChart').getContext('2d');
+
+        let currentData = deathRate; 
+
+        const chart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: state,
+                datasets: [{
+                    label: 'Dødsrate per 100,000 befolkning',
+                    backgroundColor: 'rgba(52, 152, 219, 0.8)',
+                    borderColor: 'rgba(52, 152, 219, 1)',
+                    borderWidth: 1,
+                    data: currentData,
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        title: {
+                            display: true,
+                            text: 'Dødsrate'
+                        }
+                    },
+                    x: {
+                        title: {
+                            display: true,
+                            text: 'Stater'
+                        }
+                    }
+                },
+                onClick: function (event, elements) {
+                    if (elements.length > 0) {
+                        const index = elements[0].index;
+                        toggleData(index);
+                    }
+                }
+            }
+        });
+
+        function toggleData(index) {
+            if (currentData === deathRate) {
+                currentData = deathsNum;
+                chart.data.datasets[0].label = 'Død';
+            } else {
+                currentData = deathRate;
+                chart.data.datasets[0].label = 'Dødsrate';
+            }
+
+            chart.data.datasets[0].data = currentData;
+            chart.update();
+        }
+    </script>
 </body>
 </html>
