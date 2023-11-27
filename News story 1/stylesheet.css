@@ -19,6 +19,7 @@ header {
     transition: background-image 2s;
 }
 
+
 h1 {
     font-size: 3rem;
     color: #fff;
@@ -33,6 +34,11 @@ header a {
     text-align: center;
     padding: 1rem;
 }
+
+header div {
+    text-align: center;
+}
+
 
 .scrollContainer {
     width: 100vw;

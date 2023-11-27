@@ -4,7 +4,7 @@ html {
 
 body {
     margin: 0; 
-    background-color: #a0d9ff; 
+    background-color: #e4c9b0
 }
 
 header {
@@ -21,6 +21,7 @@ header {
     background-position: center center;
 }
 
+
 h1 {
     font-size: 3rem;
     color: #fff;
@@ -29,11 +30,15 @@ h1 {
 }
 
 header a {
-    background: #004080; 
+    background: rgb(143, 92, 87);
     color: #fff;
     font-size: 1.5rem;
     text-align: center;
     padding: 1rem;
+}
+
+header div {
+    text-align: center;
 }
 
 .scrollContainer {
