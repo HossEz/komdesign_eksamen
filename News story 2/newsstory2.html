@@ -3,11 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>US Gun Deaths by State</title>
+    <title>Document</title>
+    <link rel="stylesheet" href="stylesheet.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
+    <header>
+        <div>
+            <h1>Våpenproblemer i USA...</h1>
+            <a href="#introduction">Start historien</a>
+        </div>
+    </header>
+    <section class="scrollContainer" id="introduction">
+        <div class="scrollText">
+            <p>Våpen vold er ett stort problem overalt i verden, men når det gjelder hvor det skjer mest, tar USA ledelsen. Ifølge USAfacts så er totale drept av våpen over 40.000 mennesker i 2021. Dette gjelder mord og selvmord ved våpenbruk. </p>
+        </div>
+    </section>
+    <section class="scrollContainer" id="section2">
+        <div class="scrollText">
+            <p>Under Corona pandemien så har det økt med 45% død imellom 2019 og 2021. Med tanke på at det er stor våpen vold i USA, har lederne fortsatt ikke utestengt bruket av akkurat dette. </p>
+        </div>
+    </section>
+    <section class="scrollContainer" id="section3">
+        <div class="scrollText">
+            <p>Ifølge Kyle (20), som bor i USA eller mer nærmere staten New York så er det ekstremt vanskelig å leve i frykt. Disse har blir oversatt til norsk.</p>
+            <p>Hva er det som frykter deg mest når det gjelder våpen vold? - Jeg frykter ikke våpen vold i åpen gate så ekstremt mye, selv om dette er ett stort problem. Det som frykter meg mest, er å gå på skole. Skoler har høy rate når det gjelder skole skytinger. Dette kan skje når som helst og hvor som helst. Jeg går på skole frivillig, men ender opp med å hoppe over noen dager grunnet til akkurat denne frykten. Dette har en innvirkning på min mentale helse. Kyle forteller frykten med å dra på skole, hvor våpen kan bli dratt fram når som helst. Dette er ett stort problem som må bli tatt tak i, i USA.</p>
+        </div>
+    </section>
+    <section class="scrollContainer" id="section4">
+        <div class="scrollText">
+            <p>Ved å se på visualiseringen nederst så kan du se hvilke stater som har et stort problem når det gjelder våpen vold. Denne visualiseringen viser død i 2021, ekskludert selvmord.  </p>
+        </div>
+    </section>
+    <section class="scrollContainer" id="section5">
+        <div class="scrollText">
+            <p> Visualiseringen viser døds raten i de forskjellige statene. Som man kan se er det størst våpen vold i Mississippi.</p>
+        </div>
+    </section>
+    <section class="scrollContainer" id="section6">
+        <div class="scrollText">
+            <p> Som man kan se er dødsraten ekstremt høy, grunnen til dette er at våpenbruk er lovlig i USA, men dette er mye lavere enn andre latin amerikanske land. I følge Pewsearch er USA satt i 20. plass i 2016 når det gjelder våpen vold. </p>
+        </div>
+    </section>
+
+    <h3>NB! Trykk på ett barene av for å endre fra dødsrate til død eller motsatt</h3>
+
     <canvas id="gunDeathsChart" width="100" height="40"></canvas>
+
+    
 
     <script>
         const state = ["Wyoming", "West Virginia", "Wisconsin", "Washington", "Vermont", "Virginia", "Utah", "Texas", "Tennessee", "South Dakota", "South Carolina", "Rhode Island", "Pennsylvania", "Oregon", "Oklahoma", "Ohio", "New York", "Nevada", "New Mexico", "New Jersey", "New Hampshire", "Nebraska", "North Dakota", "North Carolina", "Montana", "Mississippi", "Missouri", "Minnesota", "Michigan", "Maine", "Maryland", "Massachusetts", "Louisiana", "Kentucky", "Kansas", "Indiana", "Illinois", "Idaho", "Iowa", "Hawaii", "Georgia", "Florida", "Delaware", "Connecticut", "Colorado", "California", "Arizona", "Arkansas", "Alabama", "Alaska"];
@@ -70,5 +113,6 @@
             chart.update();
         }
     </script>
+    <script src="script.js" defer></script>
 </body>
 </html>
