@@ -1,9 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;700&display=swap');
+
 html {
     scroll-behavior: smooth;
 }
 
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Quicksand', sans-serif;
     background-color: #f5f5f5;
     margin: 0;
     padding: 0;
@@ -15,15 +17,18 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url("https://images.unsplash.com/flagged/photo-1584036561584-b03c19da874c?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-image: url("https://images.unsplash.com/photo-1620990943104-e9e26b7d2442?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
     background-size: cover;
     background-position: center center;
 }
 
 h1 {
     font-size: 3rem;
-    color: #fff;
-    text-shadow: 2px 2px 2px #000;
+    color: #ffffff;
+    text-shadow: 0px -4px 10px rgba(255,255,255,0.3);
+    background-color: #000000c2;
+    padding: 1rem;
+    box-shadow: rgba(108, 108, 121, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
 }
 
 header a {
@@ -49,11 +54,25 @@ header div {
     margin: 30vh auto;
     max-width: 50rem;
     padding: 1rem;
-    background: rgba(255, 255, 255, 0.8);
-    color: #000;
+    background-color: #000000c2;
+    color: #ffffff;
 }
 #introduction {
-    background-image: url("https://images.unsplash.com/photo-1592671963996-0b4616e9f042?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-image: url("https://images.unsplash.com/photo-1571756407234-46f229d6b801?q=80&w=1976&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+#main {
+    background-image: url("https://images.unsplash.com/photo-1448964899744-8929e9d992d7?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+#main2 {
+    background-image: url("https://images.unsplash.com/photo-1698641792886-4a808b2474ee?q=80&w=2073&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
     background-attachment: fixed;
     background-size: cover;
     background-repeat: no-repeat;
@@ -86,12 +105,13 @@ header div {
 }
 
 
-.timeline {
+.content {
     width: 80%;
     max-width: 800px;
-    margin: 10vh auto;
+    /* margin: 10vh auto; */
+    margin: 5vh auto 10vh auto;
 }
-.timeline h2 {
+.content h2 {
     font-size: 20px;
 }
 

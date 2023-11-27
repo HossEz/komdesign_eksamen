@@ -1,18 +1,99 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Arial', sans-serif;
     background-color: #f5f5f5;
     margin: 0;
     padding: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     min-height: 100vh;
 }
 
+header {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("https://images.unsplash.com/flagged/photo-1584036561584-b03c19da874c?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-size: cover;
+    background-position: center center;
+}
+
+h1 {
+    font-size: 3rem;
+    color: #fff;
+    text-shadow: 2px 2px 2px #000;
+}
+
+header a {
+    background: #000;
+    color: #fff;
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 1rem;
+}
+header div {
+    text-align: center;
+}
+
+
+.scrollContainer {
+    min-height: 100vw;
+    min-height: 60vh;
+    overflow: hidden;
+    transition: background-image 1s;
+}
+
+.scrollText {
+    margin: 30vh auto;
+    max-width: 50rem;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.8);
+    color: #000;
+}
+#introduction {
+    background-image: url("https://images.unsplash.com/photo-1592671963996-0b4616e9f042?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.textSection {
+    max-width: 50rem;
+    margin: 0 auto;
+    display: block;
+    clear: both;
+}
+
+.alignRight {
+    float: right;
+    margin: 0 0 1rem 1rem;
+}
+
+.circle {
+    width: 210px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+#changingbg {
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+
 .timeline {
-    position: relative;
     width: 80%;
     max-width: 800px;
+    /* margin: 10vh auto; */
+    margin: 5vh auto 10vh auto;
+}
+.timeline h2 {
+    font-size: 20px;
 }
 
 .event {
@@ -36,13 +117,16 @@ body {
     position: absolute;
     top: 50%;
     left: 0;
-    width: 10px;
-    height: 10px;
+    width: 12px;
+    height: 12px;
     background-color: #db3434;
     border-radius: 50%;
     transform: translateY(-50%);
 }
 
+#event8:hover {
+    height: 130px;
+} 
 
 .content {
     display: flex;
@@ -75,11 +159,23 @@ body {
 .arrow {
     width: 24px;
     height: 24px;
-    /* stroke: #db3434; */
-    margin-left: 10px; /* Adjust as needed */
+    margin-left: 10px; 
 }
 
 .svg-container{
     display: flex;
     justify-content: center;
+}
+
+.scrollText2 {
+    margin: 10vh auto;
+    max-width: 50rem;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.8);
+    color: #000;
+}
+
+.kart {
+    width: 80vh;
+    margin: 0 auto;
 }
