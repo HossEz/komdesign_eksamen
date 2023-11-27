@@ -65,12 +65,18 @@ header div {
     position: relative;
     height: auto; 
     text-align: center;
-    max-width: 100rem;
+    max-width: 90rem;
     margin: 0 auto;
     padding: 1rem;
     background: rgba(255, 255, 255, 0.8);
     color: #000;
     transition: background-image 2s;
+}
+
+.scrollText3, p{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
 }
 
 
