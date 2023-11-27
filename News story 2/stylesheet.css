@@ -29,12 +29,20 @@ h1 {
     text-align: center;
 }
 
+h2 {
+    font-size: 3rem;
+    color: #000;
+    text-shadow: 2px 2px 2px #e4c9b0;
+    text-align: center;
+}
+
 header a {
-    background: rgb(143, 92, 87);
-    color: #fff;
+    background: #e4c9b0;
+    color: #000;
     font-size: 1.5rem;
     text-align: center;
     padding: 1rem;
+    border-radius: 5rem;
 }
 
 header div {
