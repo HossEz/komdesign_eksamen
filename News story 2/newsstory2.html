@@ -35,22 +35,11 @@
             <p>Ved å se på visualiseringen nederst så kan du se hvilke stater som har et stort problem når det gjelder våpen vold. Denne visualiseringen viser død i 2021, ekskludert selvmord.  </p>
         </div>
     </section>
-    <section class="scrollContainer" id="section5">
-        <div class="scrollText">
-            <p> Visualiseringen viser døds raten i de forskjellige statene. Som man kan se er det størst våpen vold i Mississippi.</p>
-        </div>
-    </section>
-    <section class="scrollContainer" id="section6">
-        <div class="scrollText">
-            <p> Som man kan se er dødsraten ekstremt høy, grunnen til dette er at våpenbruk er lovlig i USA, men dette er mye lavere enn andre latin amerikanske land. I følge Pewsearch er USA satt i 20. plass i 2016 når det gjelder våpen vold. </p>
-        </div>
-    </section>
+    <section id="section5">
+        <div class="scrollText1">
+            <h3>NB! Trykk på ett barene av for å endre fra dødsrate til død eller motsatt</h3>
 
-    <h3>NB! Trykk på ett barene av for å endre fra dødsrate til død eller motsatt</h3>
-
-    <canvas id="gunDeathsChart" width="100" height="40"></canvas>
-
-    
+            <canvas id="gunDeathsChart" width="100" height="40"></canvas>
 
     <script>
         const state = ["Wyoming", "West Virginia", "Wisconsin", "Washington", "Vermont", "Virginia", "Utah", "Texas", "Tennessee", "South Dakota", "South Carolina", "Rhode Island", "Pennsylvania", "Oregon", "Oklahoma", "Ohio", "New York", "Nevada", "New Mexico", "New Jersey", "New Hampshire", "Nebraska", "North Dakota", "North Carolina", "Montana", "Mississippi", "Missouri", "Minnesota", "Michigan", "Maine", "Maryland", "Massachusetts", "Louisiana", "Kentucky", "Kansas", "Indiana", "Illinois", "Idaho", "Iowa", "Hawaii", "Georgia", "Florida", "Delaware", "Connecticut", "Colorado", "California", "Arizona", "Arkansas", "Alabama", "Alaska"];
@@ -113,6 +102,25 @@
             chart.update();
         }
     </script>
+    </div>
+</section>
+    <section class="scrollContainer" id="section5">
+        <div class="scrollText">
+            <p> Visualiseringen viser døds raten i de forskjellige statene. Som man kan se er det størst våpen vold i Mississippi.</p>
+        </div>
+    </section>
+    <section class="scrollContainer" id="section6">
+        <div class="scrollText">
+            <p> Som man kan se er dødsraten ekstremt høy, grunnen til dette er at våpenbruk er lovlig i USA, men dette er mye lavere enn andre latin amerikanske land. I følge Pewsearch er USA satt i 20. plass i 2016 når det gjelder våpen vold. </p>
+        </div>
+    </section>
+    <footer>
+        <h1>Kilder</h1>
+        <a href=""></a>
+        <a href=""></a>
+        <a href=""></a>
+        <a href=""></a>
+    </footer>
     <script src="script.js" defer></script>
 </body>
 </html>
