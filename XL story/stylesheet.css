@@ -22,11 +22,11 @@ header {
     background-position: center center;
 }
 
-h1 {
+header h1 {
     font-size: 3rem;
     color: #ffffff;
     text-shadow: 0px -4px 10px rgba(255,255,255,0.3);
-    background-color: #000000c2;
+    background-color: #000000e7;
     padding: 1rem;
     box-shadow: rgba(108, 108, 121, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
 }
@@ -54,7 +54,7 @@ header div {
     margin: 30vh auto;
     max-width: 50rem;
     padding: 1rem;
-    background-color: #000000c2;
+    background-color: #000000e7;
     color: #ffffff;
 }
 #introduction {
@@ -91,100 +91,29 @@ header div {
     margin: 0 0 1rem 1rem;
 }
 
-.circle {
-    width: 210px;
-    height: 200px;
-    border-radius: 50%;
-}
-
-#changingbg {
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-}
-
-
 .content {
-    width: 80%;
     max-width: 800px;
-    /* margin: 10vh auto; */
     margin: 5vh auto 10vh auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
 }
-.content h2 {
+
+.content h1 {
     font-size: 20px;
 }
 
-.event {
-    position: relative;
-    margin: 20px 0;
-    padding: 20px;
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    overflow: hidden;
-    height: 60px; 
-    transition: height 0.3s ease-out;
+.iframe-container {
+    width: 190%;
 }
 
-.event:hover {
-    height: 105px;
+.iframe-container iframe {
+    width: 100%; 
+    height: 700px;
+    border: none;
+    margin-top: 20px;
 }
 
-.event:before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 0;
-    width: 12px;
-    height: 12px;
-    background-color: #db3434;
-    border-radius: 50%;
-    transform: translateY(-50%);
-}
-
-#event8:hover {
-    height: 130px;
-} 
-
-.content {
-    display: flex;
-    flex-direction: column;
-}
-
-.date {
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #f06363;
-}
-
-.description {
-    display: flex;
-    margin-top: 10px;
-    color: #333;
-}
-
-.extra-text {
-    display: none;
-    margin-top: 10px;
-    font-size: 0.9rem;
-    color: #555;
-}
-
-.event:hover .extra-text {
-    display: block;
-}
-
-.arrow {
-    width: 24px;
-    height: 24px;
-    margin-left: 10px; 
-}
-
-.svg-container{
-    display: flex;
-    justify-content: center;
-}
 
 .scrollText2 {
     margin: 10vh auto;
@@ -193,8 +122,7 @@ header div {
     background: rgba(255, 255, 255, 0.8);
     color: #000;
 }
-
-.kart {
-    width: 80vh;
-    margin: 0 auto;
+.textImage {
+    width: 210px;
+    height: 200px;
 }

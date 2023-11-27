@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palestinians Killed by Israeli Forces (2000-2023)</title>
+    <!-- Add Chart.js and PapaParse libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+</head>
+<body style="font-family: 'Quicksand', sans-serif;">
+    <div style="width:80%; margin:auto;">
+        <h2>Palestinere drept av Israelske styrker (2001-2023)</h2>
+        <canvas id="barChart"></canvas>
+    </div>
+
+    <script>
+        fetch('ressurser/PalestineData.csv')
+            .then(response => response.text())
+            .then(csvData => {
+                const parsedData = Papa.parse(csvData, { header: true }).data;
+                const countByYearAndGender = {};
+                const years = new Set();
+                const genders = new Set();
+
+                parsedData.forEach(entry => {
+                    const year = new Date(entry['Date of death']).getFullYear();
+                    const gender = entry['Gender'];
+
+                    if (gender && gender !== 'NA') {
+                        const key = `${year}_${gender}`;
+                        countByYearAndGender[key] = countByYearAndGender[key] ? countByYearAndGender[key] + 1 : 1;
+
+                        years.add(year);
+                        genders.add(gender);
+                    }
+                });
+
+                const labels = Array.from(years).sort((a, b) => a - b);
+                const datasets = [];
+
+                Array.from(genders).forEach(gender => {
+                    const data = labels.map(year => {
+                        const key = `${year}_${gender}`;
+                        return countByYearAndGender[key] || 0;
+                    });
+
+                    datasets.push({
+                        label: `Antall drepte ${gender === 'M' ? 'Menn' : 'Kvinner'} fra Palestina`,
+                        data: data,
+                        backgroundColor: gender === 'M' ? 'lightblue' : 'lightcoral',
+                        borderColor: gender === 'M' ? 'blue' : 'red',
+                        borderWidth: 1,
+                        minBarLength: 8
+                    });
+                });
+
+                const chartData = {
+                    labels: labels,
+                    datasets: datasets
+                };
+
+                const chartOptions = {
+                    scales: {
+                        x: {
+                            type: 'linear',
+                            position: 'bottom',
+                            ticks: {
+                                stepSize: 1,
+                                beginAtZero: true,
+                                callback: function (value) {
+                                    return value.toString();
+                                }
+                            }
+                        }
+                    }
+                };
+
+                const ctx = document.getElementById('barChart').getContext('2d');
+                const myBarChart = new Chart(ctx, {
+                    type: 'bar',
+                    data: chartData,
+                    options: chartOptions
+                });
+            })
+            .catch(error => console.error('Error fetching or parsing data:', error));
+    </script>
+</body>
+</html>

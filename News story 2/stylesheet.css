@@ -1,10 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300;400;700&family=Quicksand:wght@300;400;700&display=swap');
+
 html {
     scroll-behavior: smooth;
 }
 
 body {
+    font-family: 'Kumbh Sans', sans-serif;
     margin: 0; 
-    background-color: #e4c9b0
+    background-color: #e4c9b0;
+    overflow-x: hidden;
 }
 
 header {
@@ -142,3 +146,9 @@ header div {
     display: block;
     clear: both;
 }
+
+.stolpeDiagram {
+    margin: 1rem;
+}
+
+
