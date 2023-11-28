@@ -45,18 +45,10 @@ header div {
 
 
 .scrollContainer {
-    min-height: 100vw;
-    min-height: 60vh;
+    min-height: 105vw;
     overflow: hidden;
 }
 
-/* .scrollText {
-    margin: 105vh auto;
-    max-width: 50rem;
-    padding: 1rem;
-    background-color: #fff;
-    color: #000;
-} */
 #introduction {
     background-color: #000;
     /* background-image: url("https://images.unsplash.com/photo-1571756407234-46f229d6b801?q=80&w=1976&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"); */
@@ -133,7 +125,7 @@ header div {
 
 .iframe-container iframe {
     width: 100%; 
-    height: 700px;
+    height: 750px;
     border: none;
     margin-top: 20px;
 }
@@ -158,7 +150,7 @@ header div {
     background-color: #fff;
     color: #000;
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(30px);
     transition: opacity 1.5s ease, transform 2s ease;
 }
 

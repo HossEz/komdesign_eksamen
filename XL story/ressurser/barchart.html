@@ -10,11 +10,12 @@
 <body style="font-family: 'Quicksand', sans-serif;">
     <div style="width:80%; margin:auto;">
         <h2>Palestinere drept av Israelske styrker (2001-2023)</h2>
+        <p>NB! Dataen har ikke blitt oppdatert etter den siste hendelsen som skjedde nylig.</p>
         <canvas id="barChart"></canvas>
     </div>
 
     <script>
-        fetch('ressurser/PalestineData.csv')
+        fetch('PalestineData.csv')
             .then(response => response.text())
             .then(csvData => {
                 const parsedData = Papa.parse(csvData, { header: true }).data;
