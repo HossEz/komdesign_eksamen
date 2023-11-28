@@ -116,6 +116,13 @@ header div {
     align-items: center; 
 }
 
+.content1 {
+    max-width: 200px;
+    margin: 5vh auto 1vh auto;
+    display: flex;
+    flex-direction: column
+}
+
 .content h1 {
     font-size: 20px;
 }
