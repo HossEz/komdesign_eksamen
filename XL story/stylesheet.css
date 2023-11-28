@@ -50,13 +50,13 @@ header div {
     overflow: hidden;
 }
 
-.scrollText {
-    margin: 100vh auto;
+/* .scrollText {
+    margin: 105vh auto;
     max-width: 50rem;
     padding: 1rem;
     background-color: #fff;
     color: #000;
-}
+} */
 #introduction {
     background-color: #000;
     /* background-image: url("https://images.unsplash.com/photo-1571756407234-46f229d6b801?q=80&w=1976&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"); */
@@ -89,7 +89,7 @@ header div {
 }
 
 #image3 {
-    background-image: url("https://images.unsplash.com/photo-1548704860-71425863c93b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-image: url("https://images.pexels.com/photos/5495928/pexels-photo-5495928.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
     background-attachment: fixed;
     background-size: cover;
     background-repeat: no-repeat;
@@ -142,4 +142,20 @@ header div {
 .textImage {
     width: 100%;
     height: 200px;
+}
+
+.scrollText {
+    margin: 105vh auto;
+    max-width: 50rem;
+    padding: 1rem;
+    background-color: #fff;
+    color: #000;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1.5s ease, transform 2s ease;
+}
+
+.scrollText.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
