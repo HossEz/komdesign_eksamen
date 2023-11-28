@@ -74,6 +74,7 @@ header div {
 
 #image2 {
     background-image: url("ressurser/maghazi-camp-2016.jpg");
+    /* Kilde: https://www.unrwa.org/where-we-work/gaza-strip/maghazi-camp */
     background-attachment: fixed;
     background-size: cover;
     background-repeat: no-repeat;
